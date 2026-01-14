@@ -1,0 +1,23 @@
+# VM / installers
+*.iso
+*.vmdk
+*.vhd
+*.vhdx
+*.ova
+*.ovf
+*.qcow2
+*.7z
+*.rar
+*.zip
+
+# Secrets / keys
+*.pem
+*.pfx
+*.p12
+*.key
+*.kdbx
+.env
+
+# OS junk
+.DS_Store
+Thumbs.db
