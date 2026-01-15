@@ -10,10 +10,11 @@ Active Directory, DNS, Group Policy, and ticket-style troubleshooting.
 - Focus: Help Desk operations, documentation, evidence
 
 ## Documentation
-- Environment setup: docs/01-environment-setup.md
-- Active Directory: docs/02-active-directory.md
-- Group Policy: docs/03-group-policy.md
-- Troubleshooting tickets: docs/04-troubleshooting-scenarios.md
+- [01 - Environment Setup](docs/01-environment-setup.md)
+- [02 - Active Directory](docs/02-active-directory.md)
+- [03 - Group Policy](docs/03-group-policy.md)
+- [04 - Troubleshooting Scenarios (Ticket Style)](docs/04-troubleshooting-scenarios.md)
+
 
 ## Evidence
 - Screenshots: docs/assets/screenshots/
