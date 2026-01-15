@@ -15,6 +15,12 @@ Active Directory, DNS, Group Policy, and ticket-style troubleshooting.
 - [03 - Group Policy](docs/03-group-policy.md)
 - [04 - Troubleshooting Scenarios (Ticket Style)](docs/04-troubleshooting-scenarios.md)
 
+## Recruiter-Friendly Documents
+
+Final, ready-to-review documents (scenario portfolio, evidence portfolio, CV) are available here:
+
+👉 https://github.com/Tygun02/help-desk-portfolio
+
 
 ## Evidence
 - Screenshots: docs/assets/screenshots/
