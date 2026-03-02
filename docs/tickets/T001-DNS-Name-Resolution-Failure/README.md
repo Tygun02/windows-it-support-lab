@@ -47,7 +47,7 @@ hostname
 
 Confirmed correct system identity.
 
-(Screenshot: 02-hostname.png)
+![Hostname Verification](02-hostname.png)
 
 ---
 
@@ -59,7 +59,7 @@ ipconfig /all
 
 Observed DNS server configuration.
 
-(Screenshot: 03-dns-server-config.png)
+![DNS Configuration](03-dns-server-config.png)
 
 ---
 
@@ -72,13 +72,13 @@ nslookup dc01.lab.local
 
 Result indicated resolution failure.
 
-(Screenshot: 04-nslookup.png)
+![NSLookup Failure](04-nslookup.png)
 
 ---
 
 ### 4. Confirmed Error Condition
 
-(Screenshot: 01-error.png)
+![DNS Error](01-error.png)
 
 ---
 
