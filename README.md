@@ -1,30 +1,165 @@
-# Windows IT Support Home Lab (Windows 11 + Windows Server 2022)
+# Windows IT Support Lab
 
-Recruiter-friendly home lab showcasing hands-on Windows support skills:
-Active Directory, DNS, Group Policy, and ticket-style troubleshooting.
+A hands-on Windows IT Support lab designed to simulate real-world Help Desk and IT Support scenarios using Windows Server 2022 and Windows 11.
 
-## Lab scope
-- Domain: LAB.local
-- Windows Server 2022: AD DS + DNS
-- Windows 11 Pro: domain-joined client
-- Focus: Help Desk operations, documentation, evidence
+This repository focuses on troubleshooting, investigation, and resolution of common IT issues within a domain environment.
 
-## Documentation
-- [01 - Environment Setup](docs/01-environment-setup.md)
-- [02 - Active Directory](docs/02-active-directory.md)
-- [03 - Group Policy](docs/03-group-policy.md)
-- [04 - Troubleshooting Scenarios (Ticket Style)](docs/04-troubleshooting-scenarios.md)
+The lab environment uses Active Directory, DNS, Group Policy, and PowerShell to replicate common enterprise support tasks.
 
-## Recruiter-Friendly Documents
+---
 
-Final, ready-to-review documents (scenario portfolio, evidence portfolio, CV) are available here:
+## Purpose of This Project
 
-👉 https://github.com/Tygun02/help-desk-portfolio
+The goal of this project is to demonstrate practical skills used by Help Desk and IT Support engineers.
 
+Rather than just building infrastructure, this repository focuses on **diagnosing and resolving technical issues** in a structured way similar to real IT ticket workflows.
 
-## Evidence
-- Screenshots: docs/assets/screenshots/
-- Sanitized outputs/logs: evidence/
+Each scenario includes:
 
-## Safety / professionalism
-Not uploaded: ISOs, VM disks (VMDK/VHDX/OVA), credentials, sensitive data.
+- A reported issue
+- Investigation steps
+- Root cause identification
+- Resolution steps
+- Validation testing
+- Supporting screenshots
+
+---
+
+## Lab Environment
+
+### Host Machine
+
+- VMware Workstation
+- Windows 11 Host
+
+### Virtual Machines
+
+- Windows Server 2022 (Domain Controller)
+- Windows 11 Pro (Domain Client)
+
+### Domain
+```
+LAB.local
+---
+
+## Technologies Demonstrated
+
+- Active Directory Domain Services
+- DNS configuration and troubleshooting
+- Group Policy Management
+- Domain join administration
+- Remote Desktop configuration
+- PowerShell administration
+- Windows troubleshooting tools
+
+---
+
+## Troubleshooting Workflow
+
+Each issue is investigated using a structured process similar to enterprise IT support practices.
+
+1. **User Issue Reported**
+2. **Initial Investigation**
+3. **Technical Diagnosis**
+4. **Root Cause Identification**
+5. **Remediation Steps**
+6. **Validation and Testing**
+7. **Documentation of Resolution**
+
+---
+
+## Example Support Scenarios
+
+| Scenario | Issue | Tools Used | Outcome |
+|--------|------|------|------|
+| DNS Name Resolution Failure | Client could not resolve server hostname | nslookup, DNS Manager | DNS misconfiguration identified and fixed |
+| RDP Access Issue | User unable to connect via Remote Desktop | Group Policy, Local Groups | RDP permissions corrected |
+| Group Policy Not Applying | Policy changes not reflected on client | gpresult, RSOP | Policy scope issue corrected |
+| Domain Join Failure | Workstation unable to join domain | DNS checks, Event Viewer | DNS configuration corrected |
+
+---
+
+## Skills Demonstrated
+
+### Active Directory Administration
+
+- User account creation
+- Group management
+- Organizational Unit configuration
+- Domain authentication troubleshooting
+
+### Group Policy Management
+
+- GPO creation and linking
+- Policy troubleshooting using `gpresult`
+- Policy scope and inheritance analysis
+
+### Networking Troubleshooting
+
+- DNS resolution troubleshooting
+- Domain connectivity diagnostics
+- DHCP lease validation
+
+### Windows Support Tools
+
+- Event Viewer
+- `gpresult`
+- `nslookup`
+- Remote Desktop troubleshooting
+- Command-line diagnostics
+
+---
+
+## Documentation Approach
+
+Each support scenario is documented in a structured format similar to an IT service desk ticket.
+
+Documentation includes:
+
+- Issue description
+- Investigation steps
+- Root cause
+- Remediation process
+- Validation steps
+- Screenshots of results
+
+This approach demonstrates both **technical troubleshooting ability and documentation discipline**, which are key skills for IT Support roles.
+
+---
+
+## Why This Project Is Relevant for Employers
+
+This project demonstrates the practical abilities expected from Tier 1 / Tier 2 IT Support professionals, including:
+
+- Structured troubleshooting methodology
+- Windows domain support
+- DNS and authentication diagnostics
+- Remote access troubleshooting
+- Clear technical documentation
+
+---
+
+## Future Improvements
+
+Planned improvements include:
+
+- Additional troubleshooting scenarios
+- Security policy testing
+- Advanced Group Policy scenarios
+- Additional PowerShell automation
+- Simulated enterprise incident workflows
+
+---
+
+## Related Projects
+
+Active Directory Infrastructure Lab  
+https://github.com/Tygun02/ActiveDirectory-Lab-Homelab
+
+Help Desk Scenario Portfolio  
+https://github.com/Tygun02/help-desk-portfolio
+
+---
+
+**Location:** Netherlands  
+**Role Target:** IT Support / Help Desk / Junior System Administrator
