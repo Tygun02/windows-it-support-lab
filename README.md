@@ -31,7 +31,7 @@ Each scenario includes:
 
 The diagram below shows the structure of the homelab environment used to simulate enterprise IT support scenarios.
 
-![Lab Architecture](docs/images/Active-Directory-Homelab-Architecture.svg)
+![Lab Architecture](docs/Active-Directory-Homelab-Architecture.svg)
 
 ---
 ### Host Machine
