@@ -27,8 +27,14 @@ Each scenario includes:
 
 ## Lab Environment
 
-### Host Machine
+## Lab Architecture
 
+The diagram below shows the structure of the homelab environment used to simulate enterprise IT support scenarios.
+
+![Lab Architecture](docs/images/Active-Directory-Homelab-Architecture.svg)
+
+---
+### Host Machine
 - VMware Workstation
 - Windows 11 Host
 
