@@ -80,7 +80,7 @@ Each issue is investigated using a structured process similar to enterprise IT s
 | Scenario | Issue | Tools Used | Link |
 |--------|------|------|------|
 | DNS Name Resolution Failure | Client unable to resolve hostname | nslookup, DNS Manager | [View Ticket](docs/tickets/T001-DNS-Name-Resolution-Failure) |
-| RDP Access Issue | User unable to connect via Remote Desktop | Group Policy, Local Groups | Coming Soon |
+| RDP Access Issue | User unable to connect via Remote Desktop | Group Policy, Local Groups | [View Ticket](docs/tickets/T002-RDP-Access-Denied-Group-Policy) |
 | Group Policy Not Applying | Policy not applied on client | gpresult, RSOP | Coming Soon |
 | Domain Join Failure | Workstation unable to join domain | DNS, Event Viewer | Coming Soon |
 
