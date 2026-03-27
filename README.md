@@ -79,12 +79,12 @@ Each issue is investigated using a structured process similar to enterprise IT s
 
 ## Example Support Scenarios
 
-| Scenario | Issue | Tools Used | Link |
-|--------|------|------|------|
-| DNS Name Resolution Failure | Client unable to resolve hostname | nslookup, DNS Manager | [View Ticket](docs/tickets/T001-DNS-Name-Resolution-Failure/README.md) |
-| RDP Access Issue | User unable to connect via Remote Desktop | Group Policy, Local Groups | [View Ticket](docs/tickets/T002-RDP-Access-Denied-Group-Policy/README.md) |
-| Group Policy Not Applying | Policy not applied on client | gpresult, RSOP | [View Ticket](docs/tickets/T003-Group-Policy-Not-Applying/README.md) |
-| Domain Join Failure | Workstation unable to join domain | DNS, Event Viewer | [View Ticket](docs/tickets/T004-Domain-Join-Failure/README.md) |
+| Ticket | Scenario | Description | Tools Used | Link |
+|--------|--------|------------|------------|------|
+| T001 | DNS Name Resolution Failure | Client unable to resolve domain resources | nslookup, DNS Manager | [View Ticket](docs/tickets/T001-DNS-Name-Resolution-Failure/README.md) |
+| T002 | RDP Access Denied | User blocked from remote access due to policy | Group Policy, gpresult | [View Ticket](docs/tickets/T002-RDP-Access-Denied-Group-Policy/README.md) |
+| T003 | Group Policy Not Applying | Policy not applied due to scope issue | gpresult, GPMC | [View Ticket](docs/tickets/T003-Group-Policy-Not-Applying/README.md) |
+| T004 | Domain Join Failure | Workstation unable to join domain | DNS, Event Viewer | [View Ticket](docs/tickets/T004-Domain-Join-Failure/README.md) |
 
 ---
 
