@@ -1,144 +1,102 @@
-# T002 – RDP Access Denied Due to Group Policy
+# T002 – RDP Access Denied (Group Policy)
 
-## Ticket ID
-T002
+## Issue Summary
 
-## Title
-Domain User Unable to Access Workstation via Remote Desktop (RDP)
+A domain user was unable to connect to a Windows 11 machine using Remote Desktop.
 
-## Priority
-High
+The system returned an "Access Denied" error despite the machine being online and reachable.
 
-## User Impact
-User reports being unable to remotely access a domain-joined workstation. RDP session fails with access denied message.
+---
 
 ## Environment
-- Windows Server 2022 (Domain Controller – DC01)
-- Windows 11 Pro (Domain-Joined Client – TestWin11)
-- Domain: LAB.local
-- Group Policy managing security configuration
+
+- Domain: LAB.local  
+- Target Machine: Windows 11 Pro (Domain Joined)  
+- Server: Windows Server 2022 Domain Controller  
+- Services: Active Directory, Group Policy, Remote Desktop  
 
 ---
 
-## Issue Description (User-Reported)
+## Investigation
 
-User states:
+The following troubleshooting steps were performed:
 
-> “I can connect to the machine, but it says access is denied.”
+1. Verified the target machine was powered on and reachable  
+2. Confirmed Remote Desktop was enabled  
+3. Checked Windows Firewall rules for RDP  
+4. Tested connectivity using Remote Desktop Connection  
+5. Reviewed local group membership (Remote Desktop Users)  
+6. Ran Group Policy Result:
 
-User confirms:
-- Network connectivity is working
-- Machine is online
-- Credentials are correct
+gpresult /r
 
----
-
-## Initial Assessment
-
-Since authentication credentials are valid and network connectivity exists, issue likely relates to:
-
-- Group Policy configuration
-- RDP user rights assignment
-- Security filtering
-
----
-
-## Investigation Steps
-
-### 1. Verified Computer OU Placement
-
-Confirmed workstation is located in correct Organizational Unit.
-
-(Screenshot: 01-computer-ou-placement.png)
-
----
-
-### 2. Verified GPO Link and Security Filtering
-
-Checked that GPO restricting RDP access was linked and applied to target computers.
-
-(Screenshot: 02-gpo-link-filtering.png)
-
----
-
-### 3. Confirmed RDP Deny Policy Configuration
-
-Reviewed Group Policy settings:
-
-Computer Configuration → Policies → Windows Settings → Security Settings → Local Policies → User Rights Assignment
-
-Confirmed "Deny log on through Remote Desktop Services" policy configured.
-
-(Screenshot: 03-deny-rdp-configured.png)
-
----
-
-### 4. Tested RDP Connection
-
-Attempted RDP login using domain test account.
-
-Access denied error reproduced.
-
-(Screenshot: 04-rdp-access-denied.png)
-
----
-
-### 5. Verified Event Viewer Logs
-
-Checked Security log for failed logon attempts.
-
-Observed log entries confirming denial due to user rights assignment.
-
-(Screenshot: 05-eventviewer-logon-denied.png)
+7. Analysed applied Group Policy Objects affecting RDP access  
 
 ---
 
 ## Root Cause
 
-A Group Policy Object was configured to deny RDP logon rights to specific security groups.
+A Group Policy Object (GPO) was restricting Remote Desktop access by not including the required user or group in the allowed logon settings.
 
-The affected user account was either:
-
-- Included in a restricted group
-- Not included in the permitted RDP group
-- Or affected by GPO security filtering
+The policy "Allow log on through Remote Desktop Services" did not include the correct users.
 
 ---
 
 ## Resolution
 
-Identified restrictive GPO settings.
+The issue was resolved by modifying the Group Policy settings.
 
-Adjusted policy configuration to:
+Steps performed:
 
-- Remove deny rule
-- Or correctly configure "Allow log on through Remote Desktop Services"
+1. Opened Group Policy Management Console  
+2. Located the relevant GPO affecting the client machine  
+3. Edited:
+- Allow log on through Remote Desktop Services  
+4. Added the appropriate user/group  
+5. Forced Group Policy update:
 
-Forced policy update:
-
-```
 gpupdate /force
-```
 
-Validated updated security group membership.
+6. Re-tested Remote Desktop access  
 
 ---
 
 ## Validation
 
-- RDP connection successful after policy correction
-- No further access denied messages
-- Event logs show successful authentication
+Validation steps performed:
+
+1. Re-attempted Remote Desktop connection  
+2. Successfully authenticated with the domain account  
+3. Verified full desktop session access  
+4. Confirmed policy application via:
+
+gpresult /r
+
+
+The issue was resolved successfully.
 
 ---
 
-## Lessons Learned
+## Tools Used
 
-User Rights Assignment policies override standard group membership permissions.
+- Remote Desktop Connection  
+- Group Policy Management Console  
+- gpresult  
+- gpupdate  
+- Local Security Policy  
 
-When troubleshooting RDP access issues in a domain environment:
+---
 
-1. Always verify OU placement
-2. Review linked GPOs
-3. Inspect User Rights Assignment settings
-4. Check Event Viewer security logs
+## Skills Demonstrated
+
+- Group Policy troubleshooting  
+- Remote Desktop access control  
+- Active Directory administration  
+- Permission analysis  
+- Structured incident documentation  
+
+---
+
+## Evidence
+
+Screenshots and logs are stored in the `/evidence` directory.
