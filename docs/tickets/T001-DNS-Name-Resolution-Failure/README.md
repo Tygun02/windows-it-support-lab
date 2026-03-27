@@ -1,125 +1,103 @@
 # T001 – DNS Name Resolution Failure
 
-## Ticket ID
-T001
+## Issue Summary
 
-## Title
-User Unable to Access Internal Resources by Hostname
+A domain-joined Windows 11 client was unable to resolve the hostname of the domain controller.
 
-## Priority
-Medium
+Users reported:
+- Inability to access shared resources
+- Failure to authenticate with domain services
+- Network-related errors when attempting to connect to internal systems
 
-## User Impact
-User reports inability to access internal domain resources using hostname. Network connectivity is functional, but name resolution fails.
+---
 
 ## Environment
-- Windows 11 Pro (Domain-Joined Client – TestWin11)
-- Windows Server 2022 (Domain Controller – DC01)
-- DNS hosted on Domain Controller
-- Domain: LAB.local
+
+- Domain: LAB.local  
+- Client Machine: Windows 11 Pro (Domain Joined)  
+- Server: Windows Server 2022 (Domain Controller)  
+- Services: Active Directory, DNS  
 
 ---
 
-## Issue Description (User-Reported)
+## Investigation
 
-User states:
+The following troubleshooting steps were performed:
 
-> “I can’t access shared resources. It says the server can’t be found.”
+1. Verified network connectivity using:
 
-User confirms internet access works normally.
-
----
-
-## Initial Assessment
-
-Since external connectivity is functional, issue likely relates to internal DNS resolution rather than general network connectivity.
-
----
-
-## Investigation Steps
-
-### 1. Verified Hostname
-
-Command used:
-
-hostname
+ping 8.8.8.8
 
 
-Confirmed correct system identity.
+2. Checked DNS configuration on the client machine
 
-![Hostname Verification](02-hostname.png)
-
----
-
-### 2. Verified DNS Configuration
-
-Command used:
-
-ipconfig /all
-
-Observed DNS server configuration.
-
-![DNS Configuration](03-dns-server-config.png)
-
----
-
-### 3. Tested Name Resolution
-
-Command used:
+3. Tested DNS resolution:
 
 nslookup dc01.lab.local
 
 
-Result indicated resolution failure.
-
-![NSLookup Failure](04-nslookup.png)
-
----
-
-### 4. Confirmed Error Condition
-
-![DNS Error](01-error.png)
+4. Reviewed network adapter settings
 
 ---
 
 ## Root Cause
 
-Client machine was not properly configured to use the internal Domain Controller as its primary DNS server.
+The client machine was configured to use an external DNS server instead of the domain controller.
 
-Active Directory environments require clients to use internal DNS for domain services.
+In an Active Directory environment, clients must use the domain controller as their primary DNS server for proper name resolution and authentication.
 
 ---
 
 ## Resolution
 
-Updated client DNS configuration to point to DC01 (internal IP address).
+The DNS configuration on the client machine was corrected.
 
-Flushed DNS cache:
+Steps performed:
 
-ipconfig /flushdns
-
-Renewed IP configuration:
-
-ipconfig /release
-ipconfig /renew
-
+1. Open Network Adapter Settings  
+2. Access IPv4 properties  
+3. Set Preferred DNS Server to the Domain Controller IP address  
+4. Apply and save configuration  
 
 ---
 
 ## Validation
 
-- Successful `nslookup` resolution.
-- Hostname resolves correctly.
-- User able to access internal resources.
-- No further errors observed.
+Validation steps performed:
+
+1. Re-tested DNS resolution:
+
+nslookup dc01.lab.local
+
+
+2. Verified domain login functionality  
+3. Confirmed access to network resources  
+4. Checked Group Policy application  
+
+All tests completed successfully.
 
 ---
 
-## Lessons Learned
+## Tools Used
 
-Internal DNS configuration is critical for domain-joined systems.
+- nslookup  
+- ping  
+- Network Adapter Settings  
+- Windows DNS Client  
+- Event Viewer  
 
-Improper DNS settings can break authentication, GPO processing, and resource access.
+---
 
-Always validate DNS configuration first when troubleshooting AD-related issues.
+## Skills Demonstrated
 
+- DNS troubleshooting  
+- Active Directory support  
+- Network diagnostics  
+- Root cause analysis  
+- Structured incident documentation  
+
+---
+
+## Evidence
+
+Supporting screenshots and logs are stored in the `/evidence` directory.
