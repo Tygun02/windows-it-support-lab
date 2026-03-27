@@ -49,7 +49,7 @@ The diagram below shows the structure of the homelab environment used to simulat
 
 ---
 
-## Technologies & Tools Demonstrated
+## Technologies Demonstrated
 
 - Active Directory Domain Services
 - DNS configuration and troubleshooting
