@@ -16,12 +16,12 @@ Rather than just building infrastructure, this repository focuses on **diagnosin
 
 Each scenario includes:
 
-- A reported issue
-- Investigation steps
-- Root cause identification
-- Resolution steps
-- Validation testing
-- Supporting screenshots
+- A reported issue  
+- Investigation steps  
+- Root cause identification  
+- Resolution steps  
+- Validation testing  
+- Supporting screenshots  
 
 ---
 
@@ -34,14 +34,16 @@ The diagram below shows the structure of the homelab environment used to simulat
 ![Lab Architecture](docs/Active-Directory-Homelab-Architecture.svg)
 
 ---
+
 ### Host Machine
-- VMware Workstation
-- Windows 11 Host
+
+- VMware Workstation  
+- Windows 11 Host  
 
 ### Virtual Machines
 
-- Windows Server 2022 (Domain Controller)
-- Windows 11 Pro (Domain Client)
+- Windows Server 2022 (Domain Controller)  
+- Windows 11 Pro (Domain Client)  
 
 ### Domain
 
@@ -51,13 +53,13 @@ The diagram below shows the structure of the homelab environment used to simulat
 
 ## Technologies Demonstrated
 
-- Active Directory Domain Services
-- DNS configuration and troubleshooting
-- Group Policy Management
-- Domain join administration
-- Remote Desktop configuration
-- PowerShell administration
-- Windows troubleshooting tools
+- Active Directory Domain Services  
+- DNS configuration and troubleshooting  
+- Group Policy Management  
+- Domain join administration  
+- Remote Desktop configuration  
+- PowerShell administration  
+- Windows troubleshooting tools  
 
 ---
 
@@ -65,13 +67,13 @@ The diagram below shows the structure of the homelab environment used to simulat
 
 Each issue is investigated using a structured process similar to enterprise IT support practices.
 
-1. **User Issue Reported**
-2. **Initial Investigation**
-3. **Technical Diagnosis**
-4. **Root Cause Identification**
-5. **Remediation Steps**
-6. **Validation and Testing**
-7. **Documentation of Resolution**
+1. **User Issue Reported**  
+2. **Initial Investigation**  
+3. **Technical Diagnosis**  
+4. **Root Cause Identification**  
+5. **Remediation Steps**  
+6. **Validation and Testing**  
+7. **Documentation of Resolution**  
 
 ---
 
@@ -86,34 +88,50 @@ Each issue is investigated using a structured process similar to enterprise IT s
 
 ---
 
+## Incident Documentation
+
+This project includes structured help desk tickets that simulate real-world IT support scenarios.
+
+Each ticket follows a consistent methodology:
+
+- Issue identification  
+- Investigation and diagnostics  
+- Root cause analysis  
+- Resolution steps  
+- Validation and testing  
+
+This approach reflects real IT support workflows used in enterprise environments.
+
+---
+
 ## Skills Demonstrated
 
 ### Active Directory Administration
 
-- User account creation
-- Group management
-- Organizational Unit configuration
-- Domain authentication troubleshooting
+- User account creation  
+- Group management  
+- Organizational Unit configuration  
+- Domain authentication troubleshooting  
 
 ### Group Policy Management
 
-- GPO creation and linking
-- Policy troubleshooting using `gpresult`
-- Policy scope and inheritance analysis
+- GPO creation and linking  
+- Policy troubleshooting using `gpresult`  
+- Policy scope and inheritance analysis  
 
 ### Networking Troubleshooting
 
-- DNS resolution troubleshooting
-- Domain connectivity diagnostics
-- DHCP lease validation
+- DNS resolution troubleshooting  
+- Domain connectivity diagnostics  
+- DHCP lease validation  
 
 ### Windows Support Tools
 
-- Event Viewer
-- `gpresult`
-- `nslookup`
-- Remote Desktop troubleshooting
-- Command-line diagnostics
+- Event Viewer  
+- `gpresult`  
+- `nslookup`  
+- Remote Desktop troubleshooting  
+- Command-line diagnostics  
 
 ---
 
@@ -123,12 +141,12 @@ Each support scenario is documented in a structured format similar to an IT serv
 
 Documentation includes:
 
-- Issue description
-- Investigation steps
-- Root cause
-- Remediation process
-- Validation steps
-- Screenshots of results
+- Issue description  
+- Investigation steps  
+- Root cause  
+- Remediation process  
+- Validation steps  
+- Screenshots of results  
 
 This approach demonstrates both **technical troubleshooting ability and documentation discipline**, which are key skills for IT Support roles.
 
@@ -138,11 +156,11 @@ This approach demonstrates both **technical troubleshooting ability and document
 
 This project demonstrates the practical abilities expected from Tier 1 / Tier 2 IT Support professionals, including:
 
-- Structured troubleshooting methodology
-- Windows domain support
-- DNS and authentication diagnostics
-- Remote access troubleshooting
-- Clear technical documentation
+- Structured troubleshooting methodology  
+- Windows domain support  
+- DNS and authentication diagnostics  
+- Remote access troubleshooting  
+- Clear technical documentation  
 
 ---
 
@@ -150,21 +168,21 @@ This project demonstrates the practical abilities expected from Tier 1 / Tier 2 
 
 Planned improvements include:
 
-- Additional troubleshooting scenarios
-- Security policy testing
-- Advanced Group Policy scenarios
-- Additional PowerShell automation
-- Simulated enterprise incident workflows
+- Additional troubleshooting scenarios  
+- Security policy testing  
+- Advanced Group Policy scenarios  
+- Additional PowerShell automation  
+- Simulated enterprise incident workflows  
 
 ---
 
 ## Related Projects
 
 Active Directory Infrastructure Lab  
-https://github.com/Tygun02/ActiveDirectory-Lab-Homelab
+https://github.com/Tygun02/ActiveDirectory-Lab-Homelab  
 
 Help Desk Scenario Portfolio  
-https://github.com/Tygun02/help-desk-portfolio
+https://github.com/Tygun02/help-desk-portfolio  
 
 ---
 
