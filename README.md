@@ -76,12 +76,12 @@ Each issue is investigated using a structured process similar to enterprise IT s
 
 ## Example Support Scenarios
 
-| Scenario | Issue | Tools Used | Outcome |
+| Scenario | Issue | Tools Used | Link |
 |--------|------|------|------|
-| DNS Name Resolution Failure | Client could not resolve server hostname | nslookup, DNS Manager | DNS misconfiguration identified and fixed |
-| RDP Access Issue | User unable to connect via Remote Desktop | Group Policy, Local Groups | RDP permissions corrected |
-| Group Policy Not Applying | Policy changes not reflected on client | gpresult, RSOP | Policy scope issue corrected |
-| Domain Join Failure | Workstation unable to join domain | DNS checks, Event Viewer | DNS configuration corrected |
+| DNS Name Resolution Failure | Client unable to resolve hostname | nslookup, DNS Manager | [View Ticket](docs/tickets/T001-DNS-Name-Resolution-Failure) |
+| RDP Access Issue | User unable to connect via Remote Desktop | Group Policy, Local Groups | Coming Soon |
+| Group Policy Not Applying | Policy not applied on client | gpresult, RSOP | Coming Soon |
+| Domain Join Failure | Workstation unable to join domain | DNS, Event Viewer | Coming Soon |
 
 ---
 
