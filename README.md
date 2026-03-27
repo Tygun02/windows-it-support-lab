@@ -44,11 +44,12 @@ The diagram below shows the structure of the homelab environment used to simulat
 - Windows 11 Pro (Domain Client)
 
 ### Domain
-```
-LAB.local
+
+`LAB.local`
+
 ---
 
-## Technologies Demonstrated
+## Technologies & Tools Demonstrated
 
 - Active Directory Domain Services
 - DNS configuration and troubleshooting
