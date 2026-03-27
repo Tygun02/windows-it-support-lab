@@ -79,10 +79,10 @@ Each issue is investigated using a structured process similar to enterprise IT s
 
 | Scenario | Issue | Tools Used | Link |
 |--------|------|------|------|
-| DNS Name Resolution Failure | Client unable to resolve hostname | nslookup, DNS Manager | [View Ticket](docs/tickets/T001-DNS-Name-Resolution-Failure) |
-| RDP Access Issue | User unable to connect via Remote Desktop | Group Policy, Local Groups | [View Ticket](docs/tickets/T002-RDP-Access-Denied-Group-Policy) |
-| Group Policy Not Applying | Policy not applied on client | gpresult, RSOP | [View Ticket](docs/tickets/T003-Group-Policy-Not-Applying) |
-| Domain Join Failure | Workstation unable to join domain | DNS, Event Viewer | [View Ticket](docs/tickets/T004-Domain-Join-Failure) |
+| DNS Name Resolution Failure | Client unable to resolve hostname | nslookup, DNS Manager | [View Ticket](docs/tickets/T001-DNS-Name-Resolution-Failure/README.md) |
+| RDP Access Issue | User unable to connect via Remote Desktop | Group Policy, Local Groups | [View Ticket](docs/tickets/T002-RDP-Access-Denied-Group-Policy/README.md) |
+| Group Policy Not Applying | Policy not applied on client | gpresult, RSOP | [View Ticket](docs/tickets/T003-Group-Policy-Not-Applying/README.md) |
+| Domain Join Failure | Workstation unable to join domain | DNS, Event Viewer | [View Ticket](docs/tickets/T004-Domain-Join-Failure/README.md) |
 
 ---
 
